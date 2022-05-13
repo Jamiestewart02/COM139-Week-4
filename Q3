@@ -1,0 +1,19 @@
+class Main {
+  public static void main(String[] args) {
+     ///int [] num1 = new int[10];
+      int[] num1 = {147, 323, 89, 933, 540,
+                    269, 97, 114, 298, 476};
+      int[] num2 = {148, 324, 90, 934, 541,
+                    270, 78, 115, 299, 477};
+     //int [] num2 = new int[10]; 
+    for (int i = 0; i < 10; i++) {
+        int temp;
+        temp =  num1[i];
+        num1[i] = num2[i];
+        System.out.println("num 1 changed to: " + num1[i]);
+        
+        System.out.println("num 2 changed to: " + temp);
+    }
+}
+}
+
