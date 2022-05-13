@@ -1,0 +1,20 @@
+class Main {
+  public static void main(String[] args) {
+    int [] numArray = new int[15];
+      
+    numArray = fillArray(numArray);
+    printArray(numArray); 
+  }
+   public static int[] fillArray(int[] arr) {
+       for (int num = 0; num < arr.length; num++)
+        arr[num] = num;
+       arr[4]=35; arr [8]= arr[5] + arr[12];
+        return (arr);
+        
+  }
+    public static void printArray(int[] arr){
+    for(int i: arr){ 
+    System.out.println(i);
+}
+}
+}
