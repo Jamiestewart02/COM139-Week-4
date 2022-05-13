@@ -1,0 +1,56 @@
+class Main {
+  public static void main(String[] args) {
+    double[] list = {2.3, 0.5, -0.1, 4.7};
+    double[] list2 = {2.3, 0.5, -0.1, 4.8};
+    double ans = arraySum(list);
+    System.out.println("Total is: " + ans);
+
+    double ran = arrayRange(list);
+    System.out.println("Range is: " + ran);
+
+    boolean sam = arrayEqual(list,list2);
+    System.out.println("Arrays are equal: " + sam);
+
+  }
+  public static double arraySum(double[] arr){
+    double total = 0;
+      for(int i=0; i<arr.length; i++){
+         total = total + arr[i];
+          }
+
+    return total; // return your own value here
+  }
+  public static double arrayRange(double[] arr){
+     double ans = 0;
+    double max = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+             if (arr[i] > max)
+                 max = arr[i];
+                }
+    double minvalue = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < max)
+                 minvalue = arr[i];
+                }
+      System.out.println(minvalue);
+      System.out.println(max);
+      ans = max - minvalue;  
+
+    return ans; // return your own value here
+  }
+  public static boolean arrayEqual(double[] arr1, double[] arr2){
+   boolean booleanStatment = true;
+         
+        if(arr1.length == arr2.length){
+            for (int i = 0; i < arr1.length; i++){
+                if(arr1[i] != arr2[i]){
+                booleanStatment = false;
+                }
+            }
+        }else {
+            booleanStatment = true;
+        }
+
+    return booleanStatment; // return your own value here
+  }
+}
