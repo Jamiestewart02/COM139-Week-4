@@ -1,0 +1,91 @@
+class Main {
+    public static void main(String[] args) {
+        int[] list = { 1, 2, 3, 4, 5, 0, 0, -5, -4, -3, -2, -1 };
+
+        int pos = countPositives(list);
+        int neg = countNegatives(list);
+        int odd = countOdds(list);
+        int evn = countEvens(list);
+        int zer = countZeros(list);
+
+        System.out.println("Number of positives: " + pos);
+        System.out.println("Number of negatives: " + neg);
+        System.out.println("Number of odds: " + odd);
+        System.out.println("Number of evens: " + evn);
+        System.out.println("Number of zeros: " + zer);
+    }
+
+    public static int countPositives(int[] arr) {
+        int count = 0;
+        int num = 0;
+        for (int i = 0; i < arr.length; i++) {
+            num = arr[i];
+            if (num >= 1) {
+                count++;
+            } else {
+                count = count;
+            }
+
+        }
+        return count;// 1; // return your own data here
+    }
+
+    public static int countNegatives(int[] arr) {
+        int count = 0;
+        int num = 0;
+        for (int i = 0; i < arr.length; i++) {
+            num = arr[i];
+            if (num <= 0) {
+                count++;
+            } else {
+                count = count;
+            }
+
+        }
+        return count;// 1; // return your own data here
+    }
+
+    public static int countOdds(int[] arr) {
+        int count = 0;
+        int num = 0;
+        for (int i = 0; i < arr.length; i++) {
+            num = arr[i];
+            if (num % 2 != 0) {
+                count++;
+            } else {
+                count = count;
+            }
+
+        }
+        return count;// 1; // return your own data here
+    }
+
+  public static int countEvens(int[] arr){
+    int count = 0;
+        int num = 0;
+      for (int i = 0; i < arr.length; i++) {
+        num = arr[i];
+          if(num % 2 == 0) {
+             count++; 
+          } else {
+              count = count;
+          }
+          }
+      return count;// 1; // return your own data here
+  }
+
+    public static int countZeros(int[] arr) {
+        int count = 0;
+        int num = 0;
+      for (int i = 0; i < arr.length; i++) {
+        num = arr[i];
+          if(num == 0) {
+             count++; 
+          } else {
+              count = count;
+          }
+          }
+      return count;// 1; // return your own data here
+    }
+
+}
